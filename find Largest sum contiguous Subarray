@@ -1,0 +1,30 @@
+import java.util.*;
+class M
+{
+    public static void main(String ay[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Number of the Elements --> ");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.print("Now Enter the Elements --> ");
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        int m_count=arr[0];
+        int count;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+	            count=0;
+                for(int k=i;k<=j;k++)
+                {
+                    count+=arr[k];
+                }
+                if(m_count<count)
+                    m_count=count;
+            }
+        }
+        System.out.println("Max Sum is : "+m_count);
+    }
+}
