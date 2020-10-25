@@ -1,0 +1,21 @@
+import java.util.*;
+class M
+{
+    public static void main(String ay[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Number of Elements --> ");
+        int n=sc.nextInt();
+        System.out.print("Now Enter the Elements --> ");
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        System.out.print("After Rotation Array is : ");
+        int temp=arr[0];
+        for(int i=1;i<n;i++)
+            arr[i-1]=arr[i];
+        arr[n-1]=temp;
+        for(int i:arr)
+            System.out.print(i+" ");
+    }
+}
