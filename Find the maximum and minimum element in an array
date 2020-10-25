@@ -1,0 +1,32 @@
+import java.util.*;
+class M
+{
+    static int findMax(int arr[],int n)
+    {
+        int max=arr[0];
+        for(int i=0;i<n;i++)
+            if(max<arr[i])
+                max=arr[i];
+        return max;
+    }
+    static int findMin(int arr[],int n)
+    {
+        int min=arr[0];
+        for(int i=0;i<n;i++)
+            if(min>arr[i])
+                min=arr[i];
+        return min;
+    }
+    public static void main(String ay[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Number of the Elements to Enter --> ");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.print("Enter the Element Now --> ");
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        System.out.print("Max Element is : "+findMax(arr,n));
+        System.out.print("Max Element is : "+findMin(arr,n));
+    }
+}
