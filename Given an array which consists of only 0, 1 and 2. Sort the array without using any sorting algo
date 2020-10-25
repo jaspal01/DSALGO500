@@ -1,0 +1,32 @@
+import java.util.*;
+class M
+{
+    public static void main(String ay[])
+    {
+        int c1=0,c2=0,c0=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Number of the Elements to Enter --> ");
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        System.out.print("Now Enter the Elements --> ");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+            if(arr[i]==0)
+                c0++;
+            else if(arr[i]==1)
+                c1++;
+            else if(arr[i]==2)
+                c2++;
+        }
+        for(int i=0;i<c0;i++)
+            arr[i]=0;
+        for(int i=c0;i<c0+c1;i++)
+            arr[i]=1;
+        for(int i=c0+c1;i<c0+c1+c2;i++)
+            arr[i]=2;
+        System.out.print("Sorted Array is : ");
+        for(int i:arr)
+            System.out.print(i+" ");
+    }
+}
